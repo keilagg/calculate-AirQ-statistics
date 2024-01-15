@@ -1,0 +1,2 @@
+Countrycode,Namespace,AirQualityNetwork,AirQualityStation,AirQualityStationEoICode,SamplingPoint,SamplingProcess,Sample,AirPollutant,AirPollutantCode,AveragingTime,Concentration,UnitOfMeasurement,DatetimeBegin,DatetimeEnd,Validity,Verification
+BE,BE.CELINE-IRCEL.AQ,NET-Wallonia,STA-BETN063,BETN063,SPO-BETN063_06001_100,SPP-BETN063_06001_1,,PM2.5,http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001,hour,,µg/m3,2022-01-01 00:00:00 +01:00,2022-01-01 01:00:00 +01:00,-1,3

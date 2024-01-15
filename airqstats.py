@@ -5,7 +5,7 @@ Created on Thu Jun 22 09:37:18 2023
 
 @author: keilagonzalez
 
-Air quality statistics helper
+Air quality statistics helper.
 
 This script allows users to get yearly statistics form hourly air
 quality measurements. The descriptive statistics obtained are these

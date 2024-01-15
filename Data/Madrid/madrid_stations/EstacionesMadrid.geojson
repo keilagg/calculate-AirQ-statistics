@@ -1,0 +1,31 @@
+{
+"type": "FeatureCollection",
+"name": "EstacionesMadrid",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "title": "Plaza de EspaÃ±a", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.7122567, 40.4238823 ] } },
+{ "type": "Feature", "properties": { "title": "Entre C/ AlcalÃ¡ y C/ Oâ Donell ", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.6823158, 40.4215533 ] } },
+{ "type": "Feature", "properties": { "title": "Avda. RamÃ³n y Cajal  esq. C/ PrÃ­ncipe de Vergara", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.6773491, 40.4514734 ] } },
+{ "type": "Feature", "properties": { "title": "C/ Arturo Soria  esq. C/  Vizconde de los Asilos ", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.6392422, 40.4400457 ] } },
+{ "type": "Feature", "properties": { "title": "C/ Juan PeÃ±alver", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.7133167, 40.347147 ] } },
+{ "type": "Feature", "properties": { "title": "C/ Farolillo - C/ Ervigio", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.7318356, 40.3947825 ] } },
+{ "type": "Feature", "properties": { "title": "Casa de Campo  (Terminal del TelefÃ©rico)", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.7473445, 40.4193577 ] } },
+{ "type": "Feature", "properties": { "title": "C/ JÃºpiter, 21", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.5800258, 40.4769179 ] } },
+{ "type": "Feature", "properties": { "title": "Plaza del Carmen esq. Tres Cruces", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.7031662, 40.4192091 ] } },
+{ "type": "Feature", "properties": { "title": "Avda. Moratalaz  esq. Camino de los Vinateros", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.6453104, 40.4079517 ] } },
+{ "type": "Feature", "properties": { "title": "Avda. Pablo Iglesias esq. C/ MarquÃ©s de Lema", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.7071303, 40.4455439 ] } },
+{ "type": "Feature", "properties": { "title": "Avda. Betanzos esq. C/  Monforte de Lemos ", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.7115364, 40.4782322 ] } },
+{ "type": "Feature", "properties": { "title": "C/ Arroyo del Olivar  esq. C/  RÃ­o Grande. ", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.6515286, 40.3881478 ] } },
+{ "type": "Feature", "properties": { "title": "C/ Juan de Mariana / Plaza Amanecer MÃ©ndez Ãlvaro", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.6868138, 40.3980991 ] } },
+{ "type": "Feature", "properties": { "title": "C/ JosÃ© GutiÃ©rrez Abascal", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.6903729, 40.4398904 ] } },
+{ "type": "Feature", "properties": { "title": "Paseo Venezuela- Casa de Vacas", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.6824999, 40.4144444 ] } },
+{ "type": "Feature", "properties": { "title": "Plaza Castilla (Canal)", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.6887449, 40.4655841 ] } },
+{ "type": "Feature", "properties": { "title": "Avda. La Gavia / Avda. Las Suertes", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.6121394, 40.3730118 ] } },
+{ "type": "Feature", "properties": { "title": "C/ RiaÃ±o (Barajas) ", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.5805649, 40.4623628 ] } },
+{ "type": "Feature", "properties": { "title": "Plaza ElÃ­ptica - Avda. Oporto", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.7187679, 40.3850336 ] } },
+{ "type": "Feature", "properties": { "title": "C/ Princesa de Ãboli esq. C/ MarÃ­a Tudor", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.6605173, 40.4942012 ] } },
+{ "type": "Feature", "properties": { "title": "Avda. La Guardia", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.7746101, 40.5180701 ] } },
+{ "type": "Feature", "properties": { "title": "Parque Juan Carlos I (frente oficinas mantenimiento)", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.6163407, 40.4607255 ] } },
+{ "type": "Feature", "properties": { "title": "Plaza Tres Olivos ", "id": null, "content": null, "content_type": "html" }, "geometry": { "type": "Point", "coordinates": [ -3.6897308, 40.5005477 ] } }
+]
+}
