@@ -5,7 +5,7 @@ Created on Thu Jun 22 09:37:18 2023
 
 @author: keilagonzalez
 
-Air quality statistics helper
+Air quality statistics helper.
 
 This script allows users to get yearly statistics form hourly air
 quality measurements. The descriptive statistics obtained are these
@@ -20,8 +20,8 @@ import could be done using csv files are also shown.
 This file can also be imported as a module and contains the following
 functions:
 
-    * obtention_pollutants_values - returns valid lectures
-    * mean_valid_values - returns the yearly mean values
+    * get_valid_measurements - returns valid lectures
+    * get_mean - returns the yearly mean values
     * main - the main function of the script
 """
 
@@ -31,23 +31,24 @@ import geopandas as gpd
 import valid_hours
 
 # generation of dataframes
-def obtention_pollutants_values(df, option):
-    ''' This function takes a dataframe with hourly pollutant information and delivers 
-        yearly statistics 
+def get_valid_measurements(df:pd.DataFrame, option:int)-> pd.DataFrame:
+    """Delivers valid air quality measurement values
+
+    Args:
+    df (pd.DataFrame): The DataFrame with yearly air measurements
+    option (int): Indicates the data origin:
         option =1 -> if data is taken from Madrid's opendata website
         option =2 -> if data has been taken fromt the EEA webpage
-        
-        '''
+
+    Returns:
+    pd.DataFrame: a DataFrame with valid lectures
+    """
+
     if option == 1:
 
         stats_df = valid_hours.stats_valid_hours_madrid(df)
         df['valid_lectures'] = stats_df.valid_hours
         df['unvalid_lectures'] = stats_df.unvalid_lectures
-        df['valid_lectures_count'] = df.valid_lectures.apply(len)
-        df['max_avg_gradual'] = df['valid_lectures'].apply(lambda x: max(x) if bool(x) else np.nan)
-        df['daily_avg_gradual'] = df.valid_lectures.apply(sum) / df['valid_lectures_count']
-        list_valid_values = df['valid_lectures'].tolist()
-        df['perc_99_gradual'] = pd.Series([np.percentile(x, 99) if bool(x) else np.nan for x in list_valid_values ])
         return df
     
     if option == 2:
@@ -55,9 +56,18 @@ def obtention_pollutants_values(df, option):
         df = stats_df.valid_hours
         return df
 
-
 # means of valid included in a single list
-def mean_valid_values(df:pd.DataFrame, stations_col:str, measurements:str):
+def get_mean(df:pd.DataFrame, stations_col:str, measurements:str)-> pd.DataFrame:
+    """Delivers mean concentration for specific pollutant.
+
+    Args:
+    df (pd.DataFrame): The DataFrame with valid values for specific pollutant
+    stations_col (str): Name of the column with the measurement stations identificator.
+    measurements (str): Name of the column with valid measurements.
+
+    Returns:
+    pd.DataFrame: a DataFrame the mean values per station.
+    """
     stations_list = df[stations_col].unique()
     mean_valid = []
     for station in stations_list:
@@ -70,9 +80,18 @@ def mean_valid_values(df:pd.DataFrame, stations_col:str, measurements:str):
     df_mean_valid = pd.concat([s_stations_,s_mean_valid_], axis = 1)
     return df_mean_valid
 
-def max_valid(df, stations_col:str, measurements:str) -> pd.DataFrame:
-    ''' This function creates a list of all valid values and obtains the
-        maximum annual of all hourly values of specific stations '''
+def get_max(df, stations_col:str, measurements:str) -> pd.DataFrame:
+    """Delivers maximum concentration for specific pollutant.
+
+    Args:
+    df (pd.DataFrame): The DataFrame with valid values for specific pollutant
+    stations_col (str): Name of the column with the measurement stations identificator.
+    measurements (str): Name of the column with valid measurements.
+
+    Returns:
+    pd.DataFrame: a DataFrame the maximum values per station.
+    """
+     
     max_valid = []
     stations_list = df[stations_col].unique()
     for station in stations_list:
@@ -86,8 +105,16 @@ def max_valid(df, stations_col:str, measurements:str) -> pd.DataFrame:
     return df_max
 
 def percentile_99(df, stations_col:str, measurements:str) -> pd.DataFrame:
-    ''' This function creates a list of valid values
-        and obtains the 99th perc annual of all hourly values of specific stations '''
+    """Delivers the 99th percentile for a specific pollutant.
+
+    Args:
+    df (pd.DataFrame): The DataFrame with valid values for specific pollutant
+    stations_col (str): Name of the column with the measurement stations identificator.
+    measurements (str): Name of the column with valid measurements.
+
+    Returns:
+    pd.DataFrame: a DataFrame the 99th percentile values per station.
+    """
     quant_valid = []
     stations_list = df[stations_col].unique()
     for station in stations_list:
